@@ -1,0 +1,15 @@
+#headerBox {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+label {
+    font-weight: bold;
+}

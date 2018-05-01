@@ -11,6 +11,58 @@
 </head>
 
 <body>
+    <!-- header box display -->
+    <div class="container-fluid" id="headerBox">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Train🚂 Time 🕜</h1>
+                <hr/>
+                <h2>"I spit hot firebase!"-Dylon</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- tbody + trows -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (mins)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+            </tr>
+        </thead>
+        <br>
+        <tbody>
+            <th scope="col">Train Name Col</th>
+            <th scope="col">Destination Col</th>
+            <th scope="col">Frequency Col</th>
+            <th scope="col">Next Arrival Col</th>
+            <th scope="col">Minutes Away Col</th>
+        </tbody>
+    </table>
+
+    <!-- input + submit btn -->
+    <form>
+        <div class="form-group">
+            <label for="trainNameLabel">Train Name</label>
+            <input type="text" class="form-control" id="trainNameId" placeholder="Enter Text Here">
+        </div>
+        <div class="form-group">
+            <label for="destinationLabel">Destination</label>
+            <input type="text" class="form-control" id="destinationFormId" placeholder="Enter Text Here">
+        </div>
+        <label for="firstTrainLabel">First Train Time(24hr-HH/MM)</label>
+        <input type="text" class="form-control" id="firstTrainTimeId" placeholder="Enter Text Here">
+        </div>
+        <label for="frequencyLabel">Frequency(mins)</label>
+        <input type="text" class="form-control" id="frequencyId" placeholder="Enter Text Here">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
