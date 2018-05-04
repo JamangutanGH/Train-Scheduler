@@ -7,83 +7,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
+
+
 <body>
-    <!-- header box display -->
-    <div class="container-fluid" id="headerBox">
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Train🚂 Time 🕜</h1>
-                <hr/>
-                <h2>"I spit hot firebase!"-Dylon</h2>
+                <div class="jumbotron">
+                    <h1>🚂🔥'💨🕜👀✔</h1>
+                    <hr />
+                    <label for="trainNameLabel">Train Name</label>
+                    <input type="text" class="form-control" id="trainName-FormId" placeholder="Enter Text Here">
+
+                    <label for="destinationLabel">Destination</label>
+                    <input type="text" class="form-control" id="destination-FormId" placeholder="Enter Text Here">
+
+                    <label for="firstTrainLabel">First Train Time(24hr-HH/MM)</label>
+                    <input type="text" class="form-control" id="firstTrainTime-FormId" placeholder="Enter Text Here">
+
+                    <label for="frequencyLabel">Frequency(mins)</label>
+                    <input type="text" class="form-control" id="frequency-FormId" placeholder="Enter Text Here">
+
+
+                    <input type="text" id="task" class="form-control">
+                    <button class="btn btn-info" id="addTask">Add Task</button>
+                    <div id="to-dos"> </div>
+
+                </div>
             </div>
         </div>
     </div>
-
-    <!-- tbody + trows -->
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Train Name</th>
-                <th scope="col">Destination</th>
-                <th scope="col">Frequency (mins)</th>
-                <th scope="col">Next Arrival</th>
-                <th scope="col">Minutes Away</th>
-            </tr>
-        </thead>
-        <br>
+    <div class="container">
         <tbody>
-            <th scope="col">Train Name Col</th>
-            <th scope="col">Destination Col</th>
-            <th scope="col">Frequency Col</th>
-            <th scope="col">Next Arrival Col</th>
-            <th scope="col">Minutes Away Col</th>
+            <tr>
+                <span></span>
+            </tr>
         </tbody>
-    </table>
-
-    <!-- input + submit btn -->
-    <form>
-        <div class="form-group">
-            <label for="trainNameLabel">Train Name</label>
-            <input type="text" class="form-control" id="trainNameId" placeholder="Enter Text Here">
-        </div>
-        <div class="form-group">
-            <label for="destinationLabel">Destination</label>
-            <input type="text" class="form-control" id="destinationFormId" placeholder="Enter Text Here">
-        </div>
-        <label for="firstTrainLabel">First Train Time(24hr-HH/MM)</label>
-        <input type="text" class="form-control" id="firstTrainTimeId" placeholder="Enter Text Here">
-        </div>
-        <label for="frequencyLabel">Frequency(mins)</label>
-        <input type="text" class="form-control" id="frequencyId" placeholder="Enter Text Here">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-
+    </div>
+    </div>
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <script>
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyCAcHiXKZ2Wg2AOHjbvKNysR8k_zGoLRGM",
-            authDomain: "train-scheduler-81a0e.firebaseapp.com",
-            databaseURL: "https://train-scheduler-81a0e.firebaseio.com",
-            projectId: "train-scheduler-81a0e",
-            storageBucket: "",
-            messagingSenderId: "923531494455"
+            apiKey: "AIzaSyCMjmZwhEqKQtCTWcTNTxNxbi2IFAxH8ds",
+            authDomain: "timesheet-8dbbc.firebaseapp.com",
+            databaseURL: "https://timesheet-8dbbc.firebaseio.com",
+            projectId: "timesheet-8dbbc",
+            storageBucket: "timesheet-8dbbc.appspot.com",
+            messagingSenderId: "465953238312"
         };
         firebase.initializeApp(config);
     </script>
-    <!-- moment.js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.js"></script>
-    <script src="./assets/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
 </body>
-
-</html>
