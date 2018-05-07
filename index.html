@@ -1,66 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 4ptJam@Gmail.com -->
+<!-- Hai Fraind! -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- Reset CSS Local Source -->
+    <link rel="stylesheet" href="./assets/style/reset.css">
+    <!-- bootstrap 4.0 CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Local CSS Style Source -->
+    <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 
-
-
 <body>
+
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="jumbotron">
-                    <h1>🚂🔥'💨🕜👀✔</h1>
-                    <hr />
-                    <label for="trainNameLabel">Train Name</label>
-                    <input type="text" class="form-control" id="trainName-FormId" placeholder="Enter Text Here">
+        <div class="box">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h1 class="text text-center">Train
+                        <strong>Schedule</strong>
+                    </h1>
+                    <hr>
 
-                    <label for="destinationLabel">Destination</label>
-                    <input type="text" class="form-control" id="destination-FormId" placeholder="Enter Text Here">
+                </div>
+            </div>
+            <div class="row" id "floatRight">
+                <div class="col-md-8">
+                    <table border="1" id="trainTable">
 
-                    <label for="firstTrainLabel">First Train Time(24hr-HH/MM)</label>
-                    <input type="text" class="form-control" id="firstTrainTime-FormId" placeholder="Enter Text Here">
+                        <th>
+                            <strong> |Name|</strong>
+                        </th>
+                        <th>
+                            <strong> |Train Destination|</strong>
+                        </th>
+                        <th>
+                            <strong> |Train Start Time|</strong>
+                        </th>
+                        <th>
+                            <strong> |Train Frequency|</strong>
+                        </th>
+                        <th>
+                            <strong> |Next Train|</strong>
+                        </th>
+                        <th>
+                            <strong> |Minutes Until Train|</strong>
+                        </th>
 
-                    <label for="frequencyLabel">Frequency(mins)</label>
-                    <input type="text" class="form-control" id="frequency-FormId" placeholder="Enter Text Here">
+                        <tbody>
+                            <tr class="placeholder">
+                                <td id="trainNameTd">HCode</td>
+                                <td id="trainDestinationTd">HTML</td>
+                                <td id="trainStartTimeTd">00:00</td>
+                                <td id="trainFrequencyTd">45</td>
+                                <td id="minToTrainTd">11:59 PM</td>
+                                <td id="nextTrainTd">48</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-
-                    <input type="text" id="task" class="form-control">
-                    <button class="btn btn-info" id="addTask">Add Task</button>
-                    <div id="to-dos"> </div>
-
+                <div class="col-md-4">
+                    <form>
+                        <div class="form-group">
+                            <label for="trainNameLabel"><strong>Train Name:</strong></label>
+                            <input type="text" class="form-control" id="trainNameFormId" placeholder="Enter Train Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="destinationLabel"><strong>Destination:</strong></label>
+                            <input type="text" class="form-control" id="destinationFormId" placeholder="Enter Train Destination">
+                        </div>
+                        <div class="form-group">
+                            <label for="startTimeLabel"><strong>Start Time:</strong></label>
+                            <input type="time" class="form-control" id="startTimeFormId" placeholder="Enter Train Start Time">
+                        </div>
+                        <div class="form-group">
+                            <label for="frequencyLabel"><strong>Frequency</strong></label>
+                            <input type="number" class="form-control" id="frequencyFormId" placeholder="Enter Train Frequency">
+                        </div>
+                        <button type="submit" class="btn btn-primary"><strong>Submit</strong></button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
-        <tbody>
-            <tr>
-                <span></span>
-            </tr>
-        </tbody>
-    </div>
-    </div>
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- Local JavaScript Source-->
+    <script src="./assets/application/app.js"></script>
+    <!-- Moment.js CDN -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Firebase Server -->
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <script>
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyCMjmZwhEqKQtCTWcTNTxNxbi2IFAxH8ds",
-            authDomain: "timesheet-8dbbc.firebaseapp.com",
-            databaseURL: "https://timesheet-8dbbc.firebaseio.com",
-            projectId: "timesheet-8dbbc",
-            storageBucket: "timesheet-8dbbc.appspot.com",
-            messagingSenderId: "465953238312"
+            apiKey: "AIzaSyCAcHiXKZ2Wg2AOHjbvKNysR8k_zGoLRGM",
+            authDomain: "train-scheduler-81a0e.firebaseapp.com",
+            databaseURL: "https://train-scheduler-81a0e.firebaseio.com",
+            projectId: "train-scheduler-81a0e",
+            storageBucket: "train-scheduler-81a0e.appspot.com",
+            messagingSenderId: "923531494455"
         };
         firebase.initializeApp(config);
     </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="./app.js"></script>
 </body>
+
+</html>

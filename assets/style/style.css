@@ -1,0 +1,10 @@
+/* You can make anything look good! */
+body {
+    background-image: url(../image/th3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#floatRight{
+    float:right;
+}
