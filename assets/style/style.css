@@ -8,3 +8,7 @@ body {
 #floatRight{
     float:right;
 }
+
+table {
+    background-color: #dbdbdb54;
+}

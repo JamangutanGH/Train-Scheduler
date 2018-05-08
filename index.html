@@ -32,36 +32,30 @@
             </div>
             <div class="row" id "floatRight">
                 <div class="col-md-8">
-                    <table border="1" id="trainTable">
-
-                        <th>
-                            <strong> |Name|</strong>
-                        </th>
-                        <th>
-                            <strong> |Train Destination|</strong>
-                        </th>
-                        <th>
-                            <strong> |Train Start Time|</strong>
-                        </th>
-                        <th>
-                            <strong> |Train Frequency|</strong>
-                        </th>
-                        <th>
-                            <strong> |Next Train|</strong>
-                        </th>
-                        <th>
-                            <strong> |Minutes Until Train|</strong>
-                        </th>
+                    <table id="trainTable">
+                        <thead>
+                            <th>
+                                <strong> |Name|</strong>
+                            </th>
+                            <th>
+                                <strong> |Train Destination|</strong>
+                            </th>
+                            <th>
+                                <strong> |Train Start Time|</strong>
+                            </th>
+                            <th>
+                                <strong> |Train Frequency|</strong>
+                            </th>
+                            <th>
+                                <strong> |Next Train|</strong>
+                            </th>
+                            <th>
+                                <strong> |Minutes Until Train|</strong>
+                            </th>
+                        </thead>
 
                         <tbody>
-                            <tr class="placeholder">
-                                <td id="trainNameTd">HCode</td>
-                                <td id="trainDestinationTd">HTML</td>
-                                <td id="trainStartTimeTd">00:00</td>
-                                <td id="trainFrequencyTd">45</td>
-                                <td id="minToTrainTd">11:59 PM</td>
-                                <td id="nextTrainTd">48</td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
@@ -69,22 +63,32 @@
                 <div class="col-md-4">
                     <form>
                         <div class="form-group">
-                            <label for="trainNameLabel"><strong>Train Name:</strong></label>
+                            <label for="trainNameLabel">
+                                <strong>Train Name:</strong>
+                            </label>
                             <input type="text" class="form-control" id="trainNameFormId" placeholder="Enter Train Name">
                         </div>
                         <div class="form-group">
-                            <label for="destinationLabel"><strong>Destination:</strong></label>
+                            <label for="destinationLabel">
+                                <strong>Destination:</strong>
+                            </label>
                             <input type="text" class="form-control" id="destinationFormId" placeholder="Enter Train Destination">
                         </div>
                         <div class="form-group">
-                            <label for="startTimeLabel"><strong>Start Time:</strong></label>
+                            <label for="startTimeLabel">
+                                <strong>Start Time:</strong>
+                            </label>
                             <input type="time" class="form-control" id="startTimeFormId" placeholder="Enter Train Start Time">
                         </div>
                         <div class="form-group">
-                            <label for="frequencyLabel"><strong>Frequency</strong></label>
+                            <label for="frequencyLabel">
+                                <strong>Frequency</strong>
+                            </label>
                             <input type="number" class="form-control" id="frequencyFormId" placeholder="Enter Train Frequency">
                         </div>
-                        <button type="submit" class="btn btn-primary"><strong>Submit</strong></button>
+                        <button type="submit" class="btn btn-primary">
+                            <strong>Submit</strong>
+                        </button>
                     </form>
                 </div>
             </div>
